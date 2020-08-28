@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/countdownText"
+        android:layout_width="337dp"
+        android:layout_height="29dp"
+        android:gravity="center_horizontal"
+        android:text="@string/count_down_to_election_day"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="316dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="65dp"
+        app:layout_constraintBottom_toTopOf="@id/electionThai"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/election"
+        android:layout_width="341dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="63dp"
+        android:gravity="center_horizontal"
+        android:text="@string/election_commission_of_thailand"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/countdownText"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/electionThai" />
+
+    <TextView
+        android:id="@+id/electionThai"
+        android:layout_width="341dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/election_commission_of_thailand_thai_lang"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/election"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="138dp"
+        android:layout_height="45dp"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hour" />
+
+    <TextView
+        android:id="@+id/num_days"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/bg_day"
+        android:gravity="center|center_horizontal"
+        android:text="@string/days_365"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/countdownText"
+        app:layout_constraintTop_toTopOf="@+id/num_hours" />
+
+    <TextView
+        android:id="@+id/num_sec"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/bg_second"
+        android:gravity="center"
+        android:text="@string/sec_60"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/countdownText"
+        app:layout_constraintTop_toBottomOf="@+id/countdownText" />
+
+    <TextView
+        android:id="@+id/num_hours"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/bg_hour"
+        android:gravity="center"
+        android:text="@string/hours_24"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/num_minutes"
+        app:layout_constraintStart_toEndOf="@+id/num_days"
+        app:layout_constraintTop_toTopOf="@+id/num_minutes" />
+
+    <TextView
+        android:id="@+id/num_minutes"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/bg_minute"
+        android:gravity="center"
+        android:text="@string/minutes_60"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/num_sec"
+        app:layout_constraintTop_toTopOf="@+id/num_sec" />
+
+    <TextView
+        android:id="@+id/minute"
+        android:layout_width="60dp"
+        android:layout_height="18dp"
+        android:gravity="center_horizontal"
+        android:text="@string/minutes"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/num_minutes"
+        app:layout_constraintStart_toStartOf="@+id/num_minutes"
+        app:layout_constraintTop_toBottomOf="@+id/num_minutes" />
+
+    <TextView
+        android:id="@+id/hour"
+        android:layout_width="60dp"
+        android:layout_height="18dp"
+        android:gravity="center_horizontal"
+        android:text="@string/hours"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/num_hours"
+        app:layout_constraintStart_toStartOf="@+id/num_hours"
+        app:layout_constraintTop_toBottomOf="@+id/num_hours" />
+
+    <TextView
+        android:id="@+id/days"
+        android:layout_width="60dp"
+        android:layout_height="18dp"
+        android:gravity="center_horizontal"
+        android:text="@string/days"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/num_days"
+        app:layout_constraintStart_toStartOf="@+id/num_days"
+        app:layout_constraintTop_toBottomOf="@+id/num_days" />
+
+    <TextView
+        android:id="@+id/sec"
+        android:layout_width="60dp"
+        android:layout_height="18dp"
+        android:gravity="center_horizontal"
+        android:text="@string/seconds"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/num_sec"
+        app:layout_constraintStart_toStartOf="@+id/num_sec"
+        app:layout_constraintTop_toBottomOf="@+id/num_sec" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
